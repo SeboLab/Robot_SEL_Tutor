@@ -24,7 +24,7 @@ class SpeechListener(Node):
         self.initialize_deepgram = self.create_publisher(String, 'deepgram', 10)
         
         # PARAMETERS FROM LAUNCH
-        self.declare_parameter('condition', '1')  #default to disclosure
+        self.declare_parameter('condition', '1')  #default to fictional
         self.declare_parameter('lesson', '1') # default lesson #
         self.condition = self.get_parameter('condition').get_parameter_value().string_value
         self.lesson = self.get_parameter('lesson').get_parameter_value().string_value
@@ -110,34 +110,34 @@ class SpeechListener(Node):
         self.send_expression("action hi")
         if lesson == '1':
             if condition == '1':
-                requests.post("http://"+self.misty_ip+"/api/audio/play", json={"FileName": path+"disclosure1.mp3"})
-                audio = MP3('./intro_files/disclosure1.mp3')
+                requests.post("http://"+self.misty_ip+"/api/audio/play", json={"FileName": path+"fictional1.mp3"})
+                audio = MP3('./intro_files/fictional1.mp3')
                 audio_info = audio.info 
                 length = audio_info.length + 0.3 # add here to increase time before next file
                 sleep(length)
-                requests.post("http://"+self.misty_ip+"/api/audio/play", json={"FileName": path+"disclosure2.mp3"})
-                audio = MP3('./intro_files/disclosure2.mp3')
+                requests.post("http://"+self.misty_ip+"/api/audio/play", json={"FileName": path+"fictional2.mp3"})
+                audio = MP3('./intro_files/fictional2.mp3')
                 audio_info = audio.info 
                 length = audio_info.length + 0.3 # add here to increase time before next file
                 sleep(length)
-                requests.post("http://"+self.misty_ip+"/api/audio/play", json={"FileName": path+"disclosure3.mp3"})
-                audio = MP3('./intro_files/disclosure3.mp3')
+                requests.post("http://"+self.misty_ip+"/api/audio/play", json={"FileName": path+"fictional3.mp3"})
+                audio = MP3('./intro_files/fictional3.mp3')
                 audio_info = audio.info 
                 length = audio_info.length + 0.3 # add here to increase time before next file
                 sleep(length)
             else:
-                requests.post("http://"+self.misty_ip+"/api/audio/play", json={"FileName": path+"nondisclosure1.mp3"})
-                audio = MP3('./intro_files/nondisclosure1.mp3')
+                requests.post("http://"+self.misty_ip+"/api/audio/play", json={"FileName": path+"factual1.mp3"})
+                audio = MP3('./intro_files/factual1.mp3')
                 audio_info = audio.info 
                 length = audio_info.length + 0.3 # add here to increase time before next file
                 sleep(length)
-                requests.post("http://"+self.misty_ip+"/api/audio/play", json={"FileName": path+"nondisclosure2.mp3"})
-                audio = MP3('./intro_files/nondisclosure2.mp3')
+                requests.post("http://"+self.misty_ip+"/api/audio/play", json={"FileName": path+"factual2.mp3"})
+                audio = MP3('./intro_files/factual2.mp3')
                 audio_info = audio.info 
                 length = audio_info.length + 0.3 # add here to increase time before next file
                 sleep(length)
-                requests.post("http://"+self.misty_ip+"/api/audio/play", json={"FileName": path+"nondisclosure3.mp3"})
-                audio = MP3('./intro_files/nondisclosure3.mp3')
+                requests.post("http://"+self.misty_ip+"/api/audio/play", json={"FileName": path+"factual3.mp3"})
+                audio = MP3('./intro_files/factual3.mp3')
                 audio_info = audio.info 
                 length = audio_info.length + 0.3 # add here to increase time before next file
                 sleep(length)
