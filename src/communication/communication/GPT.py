@@ -31,7 +31,7 @@ class GPT(Node):
         self.log_ = self.create_publisher(String, 'log', 10)
         
         # PARAMETERS FROM LAUNCH
-        self.declare_parameter('condition', '1')  #default to disclosure
+        self.declare_parameter('condition', '1')  #default to fictional
         self.declare_parameter('participant', 'unknown')  #default participant
         self.declare_parameter('continue', '0')  #default to new conversation
         self.declare_parameter('stu_name', 'unknown')  #default name
@@ -67,9 +67,9 @@ class GPT(Node):
         if self.resume == '0':
             if self.lesson == '1':
                 if self.condition == '1':
-                    d_or_nd = 'disclosure'
+                    d_or_nd = 'fictional'
                 else:
-                    d_or_nd = 'nondisclosure'
+                    d_or_nd = 'factual'
                 with open(f'intro_histories/lesson_{self.lesson}_{d_or_nd}_intro.txt', 'r') as file:
                     msg = file.read()
                 history = [{
@@ -194,11 +194,11 @@ def generate_prompt(condition, name, lesson, participant):
             previous_conversation = f.read()
         f.close()
     if condition == "1":
-        with open('prompts/lesson_' + lesson + '_disclosure_prompt.txt', 'r') as file:
+        with open('prompts/lesson_' + lesson + '_fictional_prompt.txt', 'r') as file:
             prompt = file.read()
         file.close()
     else:
-        with open('prompts/lesson_' + lesson + '_nondisclosure_prompt.txt', 'r') as file:
+        with open('prompts/lesson_' + lesson + '_factual_prompt.txt', 'r') as file:
             prompt = file.read()
         file.close()
     prompt = prompt.replace("[[name]]", name)
