@@ -1,6 +1,11 @@
-# Misty SEL Project Development
-## What is this?
-This is a set of ROS2 python scripts to control the Misty II robot for the SEL HRI project.
+# Robot SEL Tutor
+This repository contains the code used for the paper:
+> **Fictional vs. Factual Robot Tutor Dialogue Can Shape Child Social-Emotional Learning**
+
+### Citation
+
+> Lauren L. Wright, Kaitlyn Li, Hewitt Watkins, Kiljoong Kim, and Sarah Sebo. 2026. Fictional vs. Factual Robot Tutor Dialogue Can Shape Child
+Social-Emotional Learning. In _Proceedings of the 21st ACM/IEEE Interna-tional Conference on Human-Robot Interaction (HRI ’26), March 16–19, 2026, Edinburgh, Scotland, UK_. ACM, New York, NY, USA, 10 pages. https://doi.org/10.1145/3757279.3785596
 
 ## MacOS Users
 In order to install ROS2, we have found that it is easier to create a virtual linux machine and install it there. Virtual machine options that we have found to work include:
@@ -80,13 +85,3 @@ To do so, you can simply type `mkdir logs` in your terminal.
 2. Run `python3 summary.py`. 
 3. You will be prompted to input the student's name and lesson number, which will be used to identify the log to create the summary off of. 
 4. The summary will be stored at: `logs/{name}_lesson{number}_summary.txt`.
-
-## Other Tips
-- Sometimes when Misty is plugged in to the charger, the LED light will quickly flash blue/green, then go back to orange. Unplugging it should fix this.
-- If the process does not stop when you type `ctrl-c`, in another terminal, run `pkill '^ros2$'`
-
-## TODO in the Fall
-- come up with new lesson plans
-    - make sure new prompts implements a summary of the previous conversation
-    - think about ways to enforce the condition in the introduction of the new lesson
-- implement pause/resume streaming via button push
