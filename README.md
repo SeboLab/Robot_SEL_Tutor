@@ -7,6 +7,9 @@ This repository contains the code used for the paper:
 > Lauren L. Wright, Kaitlyn Li, Hewitt Watkins, Kiljoong Kim, and Sarah Sebo. 2026. Fictional vs. Factual Robot Tutor Dialogue Can Shape Child
 Social-Emotional Learning. In _Proceedings of the 21st ACM/IEEE Interna-tional Conference on Human-Robot Interaction (HRI ’26), March 16–19, 2026, Edinburgh, Scotland, UK_. ACM, New York, NY, USA, 10 pages. https://doi.org/10.1145/3757279.3785596
 
+### Note
+Prompts for lessons 1, 2, and 4 are not made available per a licensing agreement with Second Step. 
+
 ## MacOS Users
 In order to install ROS2, we have found that it is easier to create a virtual linux machine and install it there. Virtual machine options that we have found to work include:
 
