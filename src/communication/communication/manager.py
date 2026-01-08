@@ -20,7 +20,7 @@ class Manager(Node):
         self.transcript_publisher_ = self.create_publisher(String, 'transcript', 10)
 
         # PARAMETERS FROM LAUNCH
-        self.declare_parameter('condition', '1')  #default to disclosure
+        self.declare_parameter('condition', '1')  #default to fictional
         self.declare_parameter('participant', 'unknown')  #default participant
         self.declare_parameter('continue', '0')  #default participant
         self.declare_parameter('lesson', '1')  #default lesson #
