@@ -3,7 +3,7 @@ import launch_ros.actions
 
 def generate_launch_description():
     #asking for input before starting misty to store participant id & condition details
-    condition = input("Enter condition ('1' for disclosure & '0' for non-disclosure): ")
+    condition = input("Enter condition ('1' for fictional & '0' for factual): ")
     participant = input("Enter subject ID: ")
     lesson = input("Enter lesson number here: ")
     cont = input("Resume previous conversation (enter 0 for no, 1 for yes): ")
